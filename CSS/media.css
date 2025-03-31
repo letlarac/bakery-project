@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @media (max-width: 768px) {
     .section-default{
@@ -43,4 +44,62 @@
     #menu-list{
         display: none;
     }
+=======
+
+@media (max-width: 768px) {
+    .section-default{
+        flex-wrap: wrap;
+    }
+
+    #sobre-img{
+        width: 100%;
+    }
+    .carousel {
+        width: 100%; 
+    }
+
+    .carousel-div {
+        width: auto; 
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .card {
+        width: 90%; 
+        height: auto;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1.5rem;
+        margin: 0;
+        position: absolute;
+    }
+
+    .prev-btn {
+        left: 1rem;
+    }
+    .next-btn {
+        right: 1rem;
+    }
+
+    .cake-img{
+        height: auto;
+        min-width: 100%;
+        padding: 0.5rem;
+        background-color: rgb(186, 202, 202);
+    }
+
+    #gallery-section{
+        background-color: rgb(219, 233, 236);
+    }    
+
+    #logo{
+        width: 100%;
+        position: absolute;
+    }
+
+    #menu-list{
+        display: none;
+    }
+>>>>>>> 1cf8b1b (atualização 1)
 }
