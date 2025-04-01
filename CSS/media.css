@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-
-@media (max-width: 768px) {
-    .section-default{
-        flex-wrap: wrap;
-    }
-
-    #sobre-img{
-        width: 100%;
-    }
-
-    .cake-img{
-        height: auto;
-        width: 100%;
-        padding: 1rem;
-        background-color: rgb(186, 202, 202);
-    }
-
-    .card{
-        background-color: rgb(219, 233, 236);
-    }
-
-    .glider-contain{
-        width: 82%;
-        max-height: 100vh;
-    }
-
-    #gallery-section{
-        background-color: rgb(219, 233, 236);
-    }    
-    .glider{
-        display: flex;
-    }
-
-    #logo{
-        width: 100%;
-        position: absolute;
-    }
-
-    .dots{
-        opacity: 0;
-    }
-
-    #menu-list{
-        display: none;
-    }
-=======
 
 @media (max-width: 768px) {
     .section-default{
@@ -101,5 +54,4 @@
     #menu-list{
         display: none;
     }
->>>>>>> 1cf8b1b (atualização 1)
 }
