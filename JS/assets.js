@@ -47,24 +47,10 @@ scrollCarousel()
         totalPrice = parseFloat(simplePrice);
       }
 
-    let kgInput = document.getElementById('kg-price').addEventListener('input', function () {
-        if (this.value === '' || this.value < 1) {
-            this.value = 1; 
-        }
-        finalTotalPrice();
-    });
-
     let kgPrice = parseFloat(document.querySelector('#kg-price').value);
     let totalCakePrice = kgPrice * totalPrice;
 
     document.getElementById("cake-price").textContent = `R$ ${totalCakePrice.toFixed(2)}`;
-  
-    document.querySelectorAll('.simple-flavor, .complex-flavor').forEach(function(flavor) {
-      flavor.addEventListener("change", flavorPrice);
-
-    });
-
-    document.getElementById("kg-price").addEventListener("input", flavorPrice);
 
     return totalCakePrice;
   }
@@ -80,19 +66,33 @@ scrollCarousel()
       return totalDecorPrice;
   }
 
-  document.querySelectorAll('.check-decor').forEach(function(decor){
-    decor.addEventListener("change", finalTotalPrice);
-  })
+  
 
   function finalTotalPrice (){
     let cake = flavorPrice();
     let decor = getDecorPrice();
-
     let total = cake + decor;
+
     document.getElementById("total-price").textContent = `R$ ${total.toFixed(2)}`;
+
+
+   
   }
 
+  function eventListener(){
+    document.querySelectorAll('.simple-flavor, .complex-flavor').forEach(function(flavor) {
+        flavor.addEventListener("change", finalTotalPrice);
+      });
   
+      document.getElementById("kg-price").addEventListener("input", finalTotalPrice);
+
+      document.querySelectorAll('.check-decor').forEach(function(decor){
+        decor.addEventListener("change", finalTotalPrice);
+      })
+  }
+
+  eventListener()
   flavorPrice()
   getDecorPrice()
   finalTotalPrice()
+

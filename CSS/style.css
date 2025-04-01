@@ -164,52 +164,108 @@ html{
     align-items: center;
 }
 
+.carousel{
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    width: 90%;
+    align-items: center;
+    
+}
+
+.carousel-div{
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 10px;
+    scroll-behavior: smooth;
+    justify-content: space-between;
+    width: 100rem;
+    overflow: hidden;
+}
+
 .card{
     margin: 0 1rem;
     padding: 0.5rem;
+    flex: 0 0 auto;
     border-radius: 2rem;
     background-color: rgb(178, 210, 219);
+    scroll-snap-align: center;
+    height: 30rem;
+    width: 30rem;
 }
 
 .cake-img{
     border-radius: 2rem;
     object-fit: cover;
-    width: 37rem;
-    height: 35rem;
+    width: 100%;
+    height: 100%;
 }
 
 .card-info{
     font-family: 'Satisfy';
 }
 
-.glider-contain{
-    width: 90%;
-}
-
-.glider-next, .glider-prev{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 50%;
-    z-index: 1;
-    font-size: 3rem;
+.prev-btn,
+.next-btn {
     color: var(--primary-color);
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    border: none;
+    height: 3rem;
+    border-radius: 30%;
+    background-color: white;
+    position: relative;
 }
 
-.glider-next{
-    right: -4rem;
+.prev-btn {
+    left: 10rem;
+}
+.next-btn {
+    right: 10rem;
 }
 
-.glider-prev{
-    left: -4rem;
+#price-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.dots{
-    margin-top: 1rem;
+#flavor-table{
+    width: 45vw;
 }
 
-.glider-dot.active{
-    background: var(--light-blue);
+#decor-table{
+    width: 45vw;
 }
 
+#price-section .price-table{
+    font-size: 2rem;
+    text-align: center;
+    border: 0.1rem solid;
+    border-collapse: collapse;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+#price-section th, td{
+    border: 0.1rem solid;
+}
+
+#flavor-table h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#pay {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+#final-price th{
+    width: 50%;
+}
     
