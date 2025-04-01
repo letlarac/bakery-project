@@ -74,9 +74,6 @@ scrollCarousel()
     let total = cake + decor;
 
     document.getElementById("total-price").textContent = `R$ ${total.toFixed(2)}`;
-
-
-   
   }
 
   function eventListener(){
