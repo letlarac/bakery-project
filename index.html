@@ -27,7 +27,6 @@
     <header>
         <div id="container-menu">
             <h1 id="logo" class="menu">Os bolos da Nil</h1>
-            <i class="menu-icon">≡</i>
             <ul id="menu-list" class="menu">
                 <li> <a href="#sobre-section">Sobre</a> </li>
                 <li> <a href="#gallery-section">Galeria</a></li>
@@ -38,20 +37,21 @@
     </header>
 
     <section id="sobre-section" class="section-default">
-        <div id="sobre-img">
-            <img src="./IMG/sobre-img.JPEG" alt="the owner's picture" id="me-img">
-            <h2 id="name">Sou a Nilcea, <br> dona dos <span> Bolos da Nil<span>!</h2>
-        </div>
+       
         <div id="sobre-text-container">
             <div id="sobre-text">
             <h1>Sobre mim</h1>
             <p>Minha trajetória na confeitaria começou cedo. Em 1991, aos 16 anos, comecei a trabalhar em uma padaria, onde aprendi com o padeiro a preparar bolos. Com o tempo, fui me interessando cada vez mais pela área e passei a aceitar encomendas, conciliando essa atividade com minha profissão atual de técnica de enfermagem.</p>
             <p>Para aperfeiçoar meu trabalho, investi em cursos de confeitaria e desenvolvi novas técnicas, sempre buscando qualidade e um bom acabamento. Hoje, a confeitaria segue sendo um hobby que levo a sério, focando em produzir bolos bem-feitos para diversas ocasiões.</p>
             <p>Aqui, cada pedido é preparado com atenção aos detalhes, prezando sabor e apresentação. Seja para um evento especial ou apenas para apreciar um bom doce, estou à disposição para atender você.</p>
+            </div>
         </div>
+        <div id="sobre-img">
+            <img src="./IMG/sobre-img.JPEG" alt="the owner's picture" id="me-img">
+            <h2 id="name">Sou a Nilcea, <br> dona dos <span> Bolos da Nil<span>!</h2>
         </div>
     </section>
-
+    <div class="transition-white"></div>
 
     <section id="gallery-section" class="section-default">
         
@@ -126,10 +126,11 @@
         <button type="button" aria-label="next" class="next-btn">»</button>
 
     </section>
+    
+    <div class="transition-black"></div>
 
     <section id="price-section" class="section-default">
         <div id="flavor-table">
-                <h2>Bolos recheados (kg)</h2>
                 <table class="price-table">
             <tr>
                 <th>Recheios</th>
@@ -198,8 +199,8 @@
                 <td>--</td>
             </tr>
             <tr>
-                <td colspan="2">Quantidade de kg:</td>
-                <td><input type="number" name="" id="kg-price" value="1" min="1" max="20"></td>
+                <th colspan="2">Quantidade de kg:</th>
+                <td colspan="2"><input type="number" name="" id="kg-price" value="1" min="1" max="20"></td>
                 
             </tr>
         </table>
@@ -262,18 +263,38 @@
                 <td id="total-price"></td>
             </tr>
         </table>
-
-        <div id="pay">
-        <h2>Formas de pagamento</h2>
-        <p>Dinheiro - Pix - Cartão de débito</p>
-        <p>Encomenda com três dias de antecedência</p>
-        </div>
     </div>
     
     
     </section>
 
-    <section id="contact-section" class="section-default"></section>
+    <div class="transition-blue"></div>
+    <footer id="contact-section">
+        <div id="logo-container">
+            <div id="social"><a href="instagram">
+                <img src="/IMG/icons8-instagram-48.png" alt="instagram">
+            </a>
+                
+            <a href="whatsapp">
+                <img src="/IMG/icons8-whatsapp-48.png" alt="whatsapp">
+            </a>
+            </div>
+        </div>
+    <div id="left-footer">
+        <div id="pay">
+            <h2>Formas de pagamento</h2>
+            <p>Dinheiro - Pix - Cartão de débito</p>
+            <p>Encomenda com três dias de antecedência</p>
+            <img src="/IMG/icons8-mastercard-48.png" alt="mastercard">
+            <img src="/IMG/icons8-visa-48.png" alt="visa">
+            
+            <img src="IMG/icons8-pagamento-de-mercado-48.png" alt="mercado pago">
+            <img id="pix" src="/IMG/icons8-pix-48.png" alt="pix">
+        </div>
+
+    </div>
+    
+     </footer>
 
     <script src="/JS/assets.js"></script>
 </body>
