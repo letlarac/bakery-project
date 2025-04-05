@@ -24,7 +24,7 @@
     background-color: rgb(121, 118, 118);
     z-index: 1000;
     margin-top: 3rem;
-    width: 85%;
+    width: 100%;
     }
 
     #menu-list.show{
@@ -44,7 +44,8 @@
         color: inherit;
         text-decoration: none;
         line-height: 1.5;
-        font-family:  'Playfair Display'
+        font-family:  'Playfair Display';
+        padding-top: 0.5rem;
       }
       
    
@@ -54,8 +55,8 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 2.3rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
       }
 
     #sobre-section {
@@ -149,11 +150,15 @@
     }
   
 
-    #price-section {
+    #tables {
       padding: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    #price-h1{
+        margin-bottom: -2.5rem;
     }
   
     #flavor-table,

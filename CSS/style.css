@@ -1,6 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 html{
@@ -262,9 +264,9 @@ html{
 
 #price-h1{
     text-align: center;
-    font-size: large;
-    padding: 1rem 3rem 1rem 3rem;
-    width: 20%;
+    font-size: 1.3rem;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 40%;
     border-radius: 3rem;
     background-color: #000000;
     color: #ffffff;
@@ -333,7 +335,7 @@ html{
 }
 
 #social{
-    width: 5rem;
+    width: auto;
     display: flex;
     gap: 1.5rem;
 }
