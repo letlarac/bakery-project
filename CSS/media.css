@@ -1,25 +1,62 @@
 @media (max-width: 768px) {
-    body{
-        overflow-x: hidden;
-    }
-    /* ===== MENU ===== */
     #container-menu {
-      flex-direction: column;
-      align-items: center;
       position: fixed;
       height: 3rem;
     }
 
-    #logo {
-        margin-top: -1rem;
-        text-align: center;
-        padding-left: 0;
+    #open-menu{
+        display: flex;
+    }
+
+    #logo{
+        padding: 0;
+        margin-right: 10rem;
+        color: #ffffff;
+        text-shadow: none;
+        font-weight: 100;
+        font-style: italic;
     }
   
     #menu-list {
-      display: none;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: rgb(121, 118, 118);
+    z-index: 1000;
+    margin-top: 3rem;
+    width: 85%;
     }
-  
+
+    #menu-list.show{
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .a-link {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px; 
+        font-size: 1rem;
+        color: inherit;
+        text-decoration: none;
+        line-height: 1.5;
+        font-family:  'Playfair Display'
+      }
+      
+   
+      .a-link .icon {
+        position: absolute;
+        right: -4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.3rem;
+        height: 2.4rem;
+      }
+
     #sobre-section {
       flex-direction: column;
       align-items: center;
@@ -109,7 +146,7 @@
       right: 10px;
     }
   
-    /* ===== TABELA DE PREÇOS ===== */
+
     #price-section {
       padding: 1rem;
       display: flex;
@@ -192,7 +229,6 @@
   
   }
   
-  /* Tablets (769px até 1024px) */
   @media (min-width: 769px) and (max-width: 1024px) {
   
     #container-menu {

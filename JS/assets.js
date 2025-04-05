@@ -1,4 +1,22 @@
+function openMenu(){
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById('open-menu');
+    const menuList = document.getElementById('menu-list');
+    const links = document.querySelectorAll(".a-link");
 
+    menuButton.addEventListener("click", () => {
+      menuList.classList.toggle("show");
+      })
+
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          menuList.classList.remove("show");
+        })
+      
+      
+      })
+  })
+}
 
 function scrollCarousel(){
   document.addEventListener("DOMContentLoaded", function () {
@@ -10,7 +28,7 @@ function scrollCarousel(){
     function scroll() {
       const card = carousel.querySelector(".card");
       const style = window.getComputedStyle(card);
-      const gap = parseInt(style.marginRight) || 16; // usa o gap real se houver
+      const gap = parseInt(style.marginRight) || 16;
       return card.offsetWidth + gap;
     }
   
@@ -22,15 +40,14 @@ function scrollCarousel(){
       carousel.scrollBy({ left: -scroll(), behavior: "smooth" });
     });
   
-    // Impede corte visual por forçar min-width total
+    
     cards.forEach(card => {
-      card.style.flex = "0 0 100%"; // 100% da largura visível
+      card.style.flex = "0 0 100%"; 
     });
   });
 }
 
 scrollCarousel()
-
 
  // checando se o sabor é simples 
  function isSimple(){
@@ -111,8 +128,8 @@ scrollCarousel()
   }
 
 
-
-  eventListener()
+openMenu()
+eventListener()
   flavorPrice()
   getDecorPrice()
   finalTotalPrice()

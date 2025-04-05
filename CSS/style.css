@@ -17,7 +17,7 @@ html{
 
 #container-menu{
     height: 5rem;
-    width: 100%;
+    min-width: 100%;
     background: linear-gradient(to right, white, grey, black);
     display: flex;
     justify-content:space-between;
@@ -55,6 +55,10 @@ html{
 
 #menu-list li a:hover::after{
     width: 90%;
+}
+
+#open-menu{
+    display: none;
 }
 
 #logo {
