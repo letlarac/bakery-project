@@ -1,16 +1,11 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 html{
     font-size: 10px;
     scroll-behavior: smooth;
-}
-
-:root{
-    --primary-color: rgb(40, 140, 228);
-    --secundary-color: rgb(152, 187, 228);
-    --light-blue:  rgb(178, 210, 219);
 }
 
 .menu{
@@ -24,13 +19,11 @@ html{
     height: 5rem;
     width: 100%;
     background: linear-gradient(to right, white, grey, black);
-    background-size: cover;
-    background-position: 90% 50%;
     display: flex;
     justify-content:space-between;
     color: white;
     position: fixed;
-    z-index: 2;
+    z-index: 1000;
 }
 
 #menu-list{
@@ -87,7 +80,6 @@ html{
 }
 
 .section-default{
-    background-color: rgb(255, 255, 255);
     width: 100%;
     min-height: 100vh;
     padding-top: 5rem;
@@ -97,7 +89,6 @@ html{
     display: flex;
     justify-content: space-evenly;
     background-image: url(/IMG/back-white.svg);
-    
 }
 
 #sobre-img{
@@ -201,7 +192,6 @@ html{
     padding: 0.5rem;
     flex: 0 0 auto;
     border-radius: 2rem;
-    background-color: rgb(178, 210, 219);
     scroll-snap-align: center;
     height: 30rem;
     width: 30rem;
@@ -279,10 +269,20 @@ html{
 #pay {
     font-size: 1.6rem;
     margin-top: 2rem;
+    width: 40%;
 }
 
 #final-price th{
     width: 50%;
+}
+
+#erro-kg{
+    font-size: large;
+    background-color: rgb(145, 17, 17);
+    font-family: Playfair Display;
+    width: 25vw;
+    text-align: center;
+    border-radius: 2rem;
 }
 
 #contact-section{
@@ -321,10 +321,6 @@ html{
     padding: 2rem;
     justify-content: end;
     margin-right: -10rem;
-}
-
-#pay{
-    width: 40%;
 }
 
 #pix{

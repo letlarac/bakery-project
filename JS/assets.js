@@ -1,22 +1,32 @@
-// função para fazer o carrossel funcionar
+
+
 function scrollCarousel(){
   document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.querySelector(".carousel-div");
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-
-  function scroll() {
-      return document.querySelector(".card").offsetWidth + 16; 
-  }
-
-  nextBtn.addEventListener("click", () => {
+    const carousel = document.querySelector(".carousel-div");
+    const cards = document.querySelectorAll(".card");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+  
+    function scroll() {
+      const card = carousel.querySelector(".card");
+      const style = window.getComputedStyle(card);
+      const gap = parseInt(style.marginRight) || 16; // usa o gap real se houver
+      return card.offsetWidth + gap;
+    }
+  
+    nextBtn.addEventListener("click", () => {
       carousel.scrollBy({ left: scroll(), behavior: "smooth" });
-  });
-
-  prevBtn.addEventListener("click", () => {
+    });
+  
+    prevBtn.addEventListener("click", () => {
       carousel.scrollBy({ left: -scroll(), behavior: "smooth" });
+    });
+  
+    // Impede corte visual por forçar min-width total
+    cards.forEach(card => {
+      card.style.flex = "0 0 100%"; // 100% da largura visível
+    });
   });
-});
 }
 
 scrollCarousel()
@@ -48,6 +58,14 @@ scrollCarousel()
       }
 
     let kgPrice = parseFloat(document.querySelector('#kg-price').value);
+
+    if (kgPrice === 0 || isNaN(kgPrice)){
+      document.getElementById("erro-kg").textContent = `Por favor, insira a quantidade de kg.`;
+      return;
+    } else {
+      document.getElementById("erro-kg").textContent = ""
+    }
+    
     let totalCakePrice = kgPrice * totalPrice;
 
     document.getElementById("cake-price").textContent = `R$ ${totalCakePrice.toFixed(2)}`;
@@ -73,6 +91,10 @@ scrollCarousel()
     let decor = getDecorPrice();
     let total = cake + decor;
 
+    if (isNaN(cake)){
+      return;
+    }
+
     document.getElementById("total-price").textContent = `R$ ${total.toFixed(2)}`;
   }
 
@@ -87,6 +109,8 @@ scrollCarousel()
         decor.addEventListener("change", finalTotalPrice);
       })
   }
+
+
 
   eventListener()
   flavorPrice()

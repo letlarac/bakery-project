@@ -1,57 +1,325 @@
-
 @media (max-width: 768px) {
-    .section-default{
-        flex-wrap: wrap;
+    body{
+        overflow-x: hidden;
+    }
+    /* ===== MENU ===== */
+    #container-menu {
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 3rem;
     }
 
-    #sobre-img{
-        width: 100%;
+    #logo {
+        margin-top: -1rem;
+        text-align: center;
+        padding-left: 0;
     }
+  
+    #menu-list {
+      display: none;
+    }
+  
+    #sobre-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #sobre-img {
+      display: flex;
+      justify-content: center;
+      width: 95%;
+    }
+  
+    #sobre-img img {
+      width: 95%;
+      max-width: 40rem;
+      height: auto;
+    }
+  
+    #sobre-text {
+      font-size: 1.25rem;
+      text-align: justify;
+      width: 100%;
+      line-height: 1.7;
+    }
+
+    #sobre-text h1 {
+        font-size: 4rem;
+      }
+  
+    
+    #sobre-text-container {
+        padding: 0.1rem;
+        width: 95%;
+        line-height: 1.7;
+        display: flex;
+      }
+  
+    #name {
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+  
+    /* ===== GALERIA ===== */
     .carousel {
-        width: 100%; 
+      width: 95%;
+      height: auto;
     }
-
+  
     .carousel-div {
-        width: auto; 
-        margin-left: 1rem;
-        margin-right: 1rem;
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      margin: 0 1rem 0 1rem;
     }
-
+  
+    .carousel-div::-webkit-scrollbar {
+      display: none;
+    }
+  
     .card {
-        width: 90%; 
-        height: auto;
+      min-width: 100%;
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      width: 85%;
+      height: auto;
+      border: #f8f8f8 solid;
     }
-
-    .prev-btn, .next-btn {
-        font-size: 1.5rem;
-        margin: 0;
-        position: absolute;
-    }
-
-    .prev-btn {
-        left: 1rem;
-    }
+  
+    .prev-btn,
     .next-btn {
-        right: 1rem;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      font-size: 2rem;
+      z-index: 10;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+  
+    .prev-btn {
+      left: 10px;
+    }
+  
+    .next-btn {
+      right: 10px;
+    }
+  
+    /* ===== TABELA DE PREÇOS ===== */
+    #price-section {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #flavor-table,
+    #decor-table,
+    #final-price {
+      width: 100%;
+    }
+  
+    #flavor-table,
+    #decor-table {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+    .price-table {
+      width: 90%;
+      max-width: 60rem;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+  
+    .price-table th,
+    .price-table td {
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+  
+    #erro-kg {
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+    }
+  
+    /* ===== FOOTER ===== */
+    footer {
+    width: 100%;
+    height: auto;
     }
 
-    .cake-img{
-        height: auto;
-        min-width: 100%;
-        padding: 0.5rem;
-        background-color: rgb(186, 202, 202);
+    #contact-section{
+        height: 15rem;
+        width: 100%;
     }
 
-    #gallery-section{
-        background-color: rgb(219, 233, 236);
-    }    
+    #left-footer{
+        display: flex;
+    }
 
-    #logo{
+    #pay{
+        font-size: 1.2rem;
         width: 100%;
         position: absolute;
     }
 
-    #menu-list{
-        display: none;
+    #social {
+    display: none;
+    gap: 20px;
     }
-}
+
+    #pix{
+        height: auto;
+        margin-bottom: 0.8rem;
+    }
+
+    #social img,
+    .img-pay{
+      width: 5.5rem;
+      height: auto;
+    }
+  
+  }
+  
+  /* Tablets (769px até 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+  
+    #container-menu {
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+  
+    #menu-list {
+      display: none;
+    }
+  
+    #sobre-section {
+      flex-direction: column;
+      padding: 40px 30px;
+      text-align: center;
+      gap: 25px;
+    }
+  
+    #sobre-img {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+      }
+    
+      #sobre-img img {
+        width: 95%;
+        max-width: 40rem;
+        height: auto;
+      }
+  
+    #sobre-text {
+      font-size: 1.4rem;
+      padding: 10px 30px;
+      text-align: justify;
+      width: 100%;
+      line-height: 1.8;
+    }
+  
+    #name {
+      font-size: 2.2rem;
+      margin: 15px 0;
+    }
+  
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 50px 0;
+    }
+  
+    .carousel-div {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+    }
+  
+    .carousel-div::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .card {
+      min-width: 90%;
+      scroll-snap-align: center;
+      flex: 0 0 90%;
+    }
+  
+    .cake-img {
+      width: 100%;
+      height: 550px;
+      border-radius: 30px;
+      object-fit: cover;
+    }
+  
+    .prev-btn,
+    .next-btn {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      font-size: 2rem;
+      z-index: 10;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+  
+    .prev-btn {
+      left: 10px;
+    }
+  
+    .next-btn {
+      right: 10px;
+    }
+  
+    footer {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #pay {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      order: -1;
+    }
+  
+    #social {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    #social img,
+    #pay img,
+    #pix {
+      width: 60px;
+    }
+  
+    #left-footer {
+      text-align: center;
+    }
+  }
+  
