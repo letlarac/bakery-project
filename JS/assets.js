@@ -39,11 +39,6 @@ function scrollCarousel(){
     prevBtn.addEventListener("click", () => {
       carousel.scrollBy({ left: -scroll(), behavior: "smooth" });
     });
-  
-    
-    cards.forEach(card => {
-      card.style.flex = "0 0 100%"; 
-    });
   });
 }
 

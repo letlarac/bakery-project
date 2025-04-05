@@ -26,6 +26,10 @@ html{
     z-index: 1000;
 }
 
+.icon{
+    display: none;
+}
+
 #menu-list{
     display: flex;
     margin-right: 3rem;
@@ -178,7 +182,7 @@ html{
     gap: 1rem;
     width: 90%;
     align-items: center;
-    
+    height: 100%;
 }
 
 .carousel-div{
@@ -187,7 +191,7 @@ html{
     gap: 10px;
     scroll-behavior: smooth;
     justify-content: space-between;
-    width: 100rem;
+    width: 85%;
     overflow: hidden;
 }
 
@@ -233,13 +237,19 @@ html{
 }
 
 #price-section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #FFFFFF;
     background-image: url(/IMG/back-white.svg);
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tables{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4rem;
 }
 
 #flavor-table{
@@ -248,6 +258,17 @@ html{
 
 #decor-table{
     width: 45vw;
+}
+
+#price-h1{
+    text-align: center;
+    font-size: large;
+    padding: 1rem 3rem 1rem 3rem;
+    width: 20%;
+    border-radius: 3rem;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 2rem;
 }
 
 #price-section .price-table{
